@@ -44,8 +44,8 @@ function Login() {
     // Go to OAuth provider login page
     account.createOAuth2Session(
       "google",
-      "https://quizwiz-hackathon.netlify.app/profile",
-      "https://quizwiz-hackathon.netlify.app/login"
+      "quizwiz-hackathon.netlify.app/profile",
+      "quizwiz-hackathon.netlify.app/login"
     );
   }
 
