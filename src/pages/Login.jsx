@@ -132,7 +132,7 @@ function Login() {
                 </p>
               </div>
 
-              <div className="flex items-center gap-4 my-4">
+              {/* <div className="flex items-center gap-4 my-4">
                 <hr className="border-t border-gray-300 w-1/2" />
                 <p className="uppercase text-center text-[2.5rem] text-gray-400">
                   OR
@@ -147,7 +147,7 @@ function Login() {
                 <span className="text-[1.5rem] text-secondary font-semibold">
                   Sign in with Google
                 </span>
-              </div>
+              </div> */}
             </form>
           </div>
         </div>

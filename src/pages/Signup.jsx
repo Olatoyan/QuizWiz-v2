@@ -89,8 +89,8 @@ function Signup() {
     const baseURL = window.location.origin;
 
     // Use the base URL to construct the OAuth provider URLs
-    const profileURL = `${baseURL}/profile`;
-    const loginURL = `${baseURL}/login`;
+    const profileURL = `/profile`;
+    const loginURL = `/login`;
 
     // Go to OAuth provider login page
     account.createOAuth2Session("google", profileURL, loginURL);
@@ -111,7 +111,7 @@ function Signup() {
             Join QuizWiz and Supercharge Your Learning!
           </h3>
 
-          <div className=" shadow  ">
+          <div className="   ">
             <form className="space-y-6" action="#" method="POST">
               <InputField
                 label="Username"
@@ -191,7 +191,7 @@ function Signup() {
                 </p>
               </div>
 
-              <div className="flex items-center gap-4 my-4">
+              {/* <div className="flex items-center gap-4 my-4">
                 <hr className="border-t border-gray-300 w-1/2" />
                 <p className="uppercase text-center text-[2.5rem] text-gray-400">
                   OR
@@ -207,7 +207,7 @@ function Signup() {
                 <span className="text-[1.5rem] text-secondary font-semibold">
                   Sign up with Google
                 </span>
-              </div>
+              </div> */}
             </form>
           </div>
         </div>
