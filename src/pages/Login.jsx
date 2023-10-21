@@ -38,15 +38,29 @@ function Login() {
    * Initiates the OAuth2 authentication flow with Google.
    * @param {Event} e - The button click event.
    */
+  // function googleSignin(e) {
+  //   e.preventDefault();
+
+  //   // Go to OAuth provider login page
+  //   account.createOAuth2Session(
+  //     "google",
+  //     "https://quizwiz-hackathon.netlify.app/profile",
+  //     "https://quizwiz-hackathon.netlify.app/login"
+  //   );
+  // }
+
   function googleSignin(e) {
     e.preventDefault();
 
+    // Determine the base URL based on the current environment
+    const baseURL = window.location.origin;
+
+    // Use the base URL to construct the OAuth provider URLs
+    const profileURL = `${baseURL}/profile`;
+    const loginURL = `${baseURL}/login`;
+
     // Go to OAuth provider login page
-    account.createOAuth2Session(
-      "google",
-      "https://quizwiz-hackathon.netlify.app/profile",
-      "https://quizwiz-hackathon.netlify.app/login"
-    );
+    account.createOAuth2Session("google", profileURL, loginURL);
   }
 
   return (

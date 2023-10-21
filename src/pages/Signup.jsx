@@ -71,17 +71,30 @@ function Signup() {
     }
   };
 
+  // function googleSignin(e) {
+  //   e.preventDefault();
+  //   const currentURL = window.location.href;
+
+  //   // Go to OAuth provider login page
+  //   account.createOAuth2Session(
+  //     "google",
+  //     "https://quizwiz-hackathon.netlify.app/profile",
+  //     "https://quizwiz-hackathon.netlify.app/login"
+  //   );
+  // }
   function googleSignin(e) {
     e.preventDefault();
 
-    // Go to OAuth provider login page
-    account.createOAuth2Session(
-      "google",
-      "https://quizwiz-hackathon.netlify.app",
-      "https://quizwiz-hackathon.netlify.app/login"
-    );
-  }
+    // Determine the base URL based on the current environment
+    const baseURL = window.location.origin;
 
+    // Use the base URL to construct the OAuth provider URLs
+    const profileURL = `${baseURL}/profile`;
+    const loginURL = `${baseURL}/login`;
+
+    // Go to OAuth provider login page
+    account.createOAuth2Session("google", profileURL, loginURL);
+  }
   return (
     <section className="bg-bgColor">
       <Header />
