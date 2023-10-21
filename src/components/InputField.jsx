@@ -37,7 +37,7 @@ function InputField({ label, id, placeholder, value, onChange, type }) {
           name="name"
           type={passwordVisible ? "text" : type}
           placeholder={placeholder}
-          className="w-full border-0 focus:outline-0"
+          className="w-full border-0 focus:outline-0 focus:border-0"
           value={value}
           onChange={onChange}
         />
