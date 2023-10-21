@@ -44,8 +44,8 @@ function Login() {
     // Go to OAuth provider login page
     account.createOAuth2Session(
       "google",
-      "quizwiz-hackathon.netlify.app/profile",
-      "quizwiz-hackathon.netlify.app/login"
+      "http://localhost:5173/profile",
+      "http://localhost:5173/login"
     );
   }
 
